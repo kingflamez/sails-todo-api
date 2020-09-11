@@ -1,0 +1,39 @@
+{
+  "name": "todo-api",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "keywords": [],
+  "dependencies": {
+    "@sailshq/lodash": "^3.10.3",
+    "bcrypt": "^5.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "sails": "^1.2.5",
+    "sails-hook-orm": "^2.1.1",
+    "sails-hook-sockets": "^2.0.0",
+    "sails-mysql": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "5.16.0",
+    "mocha": "^8.1.3",
+    "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production node app.js",
+    "dev": "nodemon app.js",
+    "test": "npm run lint && npm run custom-tests && echo 'Done.'",
+    "lint": "./node_modules/eslint/bin/eslint.js . --fix --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
+    "custom-tests": "mocha test/lifecycle.test.js test/integration/**/*.test.js"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kingflamez/sails-todo-api.git"
+  },
+  "author": "kingflamez",
+  "license": "",
+  "engines": {
+    "node": "^14.4"
+  }
+}
