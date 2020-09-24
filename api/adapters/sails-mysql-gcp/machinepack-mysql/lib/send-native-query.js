@@ -119,7 +119,7 @@ module.exports = {
     if (!inputs.meta || !inputs.meta.isUsingQuestionMarks) {
       // Process SQL template, escaping bindings.
       // This converts `$1`, `$2`, etc. into the escaped binding.
-      sql = sql.replace(/\$[1-9][0-9]*/g, function (substr){
+      sql = sql.replace(/\$[1-9][0-9]*/g, (substr) => {
 
         // e.g. `'$3'` => `'3'` => `3` => `2`
         var idx = +( substr.slice(1) ) - 1;

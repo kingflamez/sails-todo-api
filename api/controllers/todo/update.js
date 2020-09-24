@@ -1,33 +1,33 @@
 module.exports = {
-  friendlyName: "Update",
+  friendlyName: 'Update',
 
-  description: "Update todo.",
+  description: 'Update todo.',
 
   inputs: {
     task: {
-      description: "The task to replace the current task",
-      type: "string",
+      description: 'The task to replace the current task',
+      type: 'string',
       required: true,
     },
     id: {
-      description: "The task id",
-      type: "string",
+      description: 'The task id',
+      type: 'string',
       required: true,
     },
   },
 
   exits: {
     badRequest: {
-      description: "Task could not be updated",
-      responseType: "badRequest",
+      description: 'Task could not be updated',
+      responseType: 'badRequest',
     },
     notFound: {
       statusCode: 404,
-      description: "Task does not exist",
+      description: 'Task does not exist',
     },
     success: {
       statusCode: 200,
-      description: "Task updated successfully",
+      description: 'Task updated successfully',
     },
   },
 
@@ -38,7 +38,7 @@ module.exports = {
       if (!taskExist) {
         return exits.notFound({
           status: false,
-          message: "Task does not exist",
+          message: 'Task does not exist',
         });
       }
 
@@ -52,10 +52,10 @@ module.exports = {
 
       return exits.success({
         status: true,
-        message: "Task updated successfully",
+        message: 'Task updated successfully',
       });
     } catch (error) {
-      throw "badRequest";
+      throw 'badRequest';
     }
   },
 };

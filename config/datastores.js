@@ -45,9 +45,9 @@ module.exports.datastores = {
      *    (See https://sailsjs.com/config/datastores for help.)                 *
      *                                                                          *
      ***************************************************************************/
-    adapter: "sails-mysql-gcp",
-    user: "root",
-    password: "",
-    database: "todo",
+    adapter: 'sails-mysql-gcp',
+    user: 'root',
+    password: '',
+    database: 'todo',
   },
 };

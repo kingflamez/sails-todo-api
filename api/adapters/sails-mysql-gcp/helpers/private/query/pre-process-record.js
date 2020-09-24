@@ -51,7 +51,7 @@ module.exports = function preProcessRecord(options) {
   }
 
   // Key the collections by identity instead of column name
-  var collections = _.reduce(options.orm.collections, function(memo, val) {
+  var collections = _.reduce(options.orm.collections, (memo, val) => {
     memo[val.identity] = val;
     return memo;
   }, {});
